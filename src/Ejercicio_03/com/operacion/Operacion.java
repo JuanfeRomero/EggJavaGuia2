@@ -1,0 +1,58 @@
+package Ejercicio_03.com.operacion;
+
+import com.sun.xml.internal.stream.Entity;
+
+import java.util.Scanner;
+
+public class Operacion {
+    private int numero1;
+    private int numero2;
+
+    public Operacion(int numero1, int numero2) {
+        this.numero1 = numero1;
+        this.numero2 = numero2;
+    }
+
+    public Operacion() {
+    }
+
+    public int getNumero1() {
+        return numero1;
+    }
+
+    public void setNumero1(int numero1) {
+        this.numero1 = numero1;
+    }
+
+    public int getNumero2() {
+        return numero2;
+    }
+
+    public void setNumero2(int numero2) {
+        this.numero2 = numero2;
+    }
+
+    public void crearOperacion() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Ingrese el primero numero");
+        setNumero1(sc.nextInt());
+        System.out.println("Ingrese el segundo numero");
+        setNumero2(sc.nextInt());
+    }
+
+    public int sumar(){
+        return getNumero1()+getNumero2();
+    }
+
+    public int restar(){
+        return getNumero1()-getNumero2();
+    }
+
+    public int multiplicar(){
+        return getNumero1()*getNumero2();
+    }
+
+    public double dividir(){
+        return getNumero2() == 0? 0: (double)getNumero1()/(double)getNumero2();
+    }
+}
