@@ -34,7 +34,6 @@ public class RaicesService {
         double[] respuestas = new double[2];
         double a = raices.getA();
         double b = raices.getB();
-        double c = raices.getC();
 
         if (tieneRaices(raices)) {
             double sqrt = Math.sqrt(getDiscriminante(raices));
